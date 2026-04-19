@@ -15,12 +15,13 @@ export default function Navbar({ onHomeClick }) {
 
   const navLinks = [
     { to: "about", label: "About Me" },
-    { to: "expertise", label: "My Expertise" },
-    { to: "experience", label: "My Jobs" },
-    { to: "academic", label: "My Academics" },
-    { to: "skills", label: "My Skills" },
-    { to: "approach", label: "My Approach" },
-    { to: "projects", label: "My Projects" },
+    { to: "expertise", label: "Expertise" },
+    { to: "mastery", label: "Mastery" },
+    { to: "experience", label: "Jobs" },
+    { to: "academic", label: "Academics" },
+    { to: "skills", label: "Skills" },
+    { to: "approach", label: "Approach" },
+    { to: "projects", label: "Projects" },
   ];
 
   const handleLinkClick = () => {

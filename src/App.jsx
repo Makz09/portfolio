@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import TechnicalArsenal from './sections/TechnicalArsenal';
+import ProfessionalMastery from './sections/ProfessionalMastery';
 import Trajectory from './sections/Trajectory';
 import ProgrammingSkills from './sections/ProgrammingSkills';
 import Methodology from './sections/Methodology';
@@ -33,6 +34,7 @@ function App() {
               <Hero />
               <About />
               <TechnicalArsenal />
+              <ProfessionalMastery />
               <Trajectory />
               <ProgrammingSkills />
               <Methodology />

@@ -1,8 +1,23 @@
 import React from 'react';
 import { FaCalendarAlt } from 'react-icons/fa';
+import { GraduationCap, Code2, Package, Settings, PenTool, School, MapPin, Briefcase, Zap, Droplets } from 'lucide-react';
 import TiltWidget from './TiltWidget';
 
-export default function TimelineItem({ data, align = "left", isLast = false, isEducation = false }) {
+const getTimelineIcon = (title) => {
+  const lowerTitle = title.toLowerCase();
+  if (lowerTitle.includes('faculty') || lowerTitle.includes('professor')) return GraduationCap;
+  if (lowerTitle.includes('developer') || lowerTitle.includes('architect') || lowerTitle.includes('programmer')) return Code2;
+  if (lowerTitle.includes('asset') || lowerTitle.includes('warehouse')) return Package;
+  if (lowerTitle.includes('degreasing')) return Droplets;
+  if (lowerTitle.includes('autocad')) return PenTool;
+  if (lowerTitle.includes('wire-cut')) return Zap;
+  if (lowerTitle.includes('education') || lowerTitle.includes('secondary') || lowerTitle.includes('tertiary')) return School;
+  return Briefcase;
+};
+
+export default function TimelineItem({ data, align = "left", isLast = false, isEducation = false, eduNumber }) {
+  const Icon = getTimelineIcon(data.title);
+
   return (
     <>
       {/* Desktop View */}
@@ -38,8 +53,16 @@ export default function TimelineItem({ data, align = "left", isLast = false, isE
         {/* Card side */}
         <div className={`w-1/2 flex px-6 ${align === 'right' ? 'justify-end' : 'justify-start'}`}>
           <TiltWidget>
-            <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 p-8 rounded-2xl w-full group-hover:border-[#ff2a2a]/50 group-hover:bg-[#ff2a2a]/[0.02] transition-all duration-300 shadow-[0_0_20px_rgba(255,42,42,0.05)] group-hover:shadow-[0_0_30px_rgba(255,42,42,0.2)] h-full">
-              <h4 className="text-xl font-bold text-white mb-2 group-hover:text-[#ff2a2a] group-hover:drop-shadow-[0_0_8px_rgba(255,42,42,0.6)] transition-all duration-300">{data.title}</h4>
+            <div className={`bg-white/[0.02] backdrop-blur-xl border border-white/10 p-8 rounded-2xl w-full group-hover:border-[#ff2a2a]/50 group-hover:bg-[#ff2a2a]/[0.02] transition-all duration-300 shadow-[0_0_20px_rgba(255,42,42,0.05)] group-hover:shadow-[0_0_30px_rgba(255,42,42,0.2)] h-full relative overflow-hidden ${isEducation ? 'border-b-4 border-b-[#ff2a2a] shadow-[0_8px_20px_-10px_rgba(255,42,42,0.6)]' : ''}`}>
+              <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 group-hover:text-[#ff2a2a] transition-all duration-500">
+                {isEducation ? (
+                  <span className="text-4xl font-black">{eduNumber}</span>
+                ) : (
+                  <Icon className="w-8 h-8" />
+                )}
+              </div>
+              
+              <h4 className="text-xl font-bold text-white mb-2 group-hover:text-[#ff2a2a] group-hover:drop-shadow-[0_0_8px_rgba(255,42,42,0.6)] transition-all duration-300 pr-12">{data.title}</h4>
               <p className="text-sm text-zinc-400 font-medium">{data.company || data.institution}</p>
               
               {data.details && (
@@ -64,6 +87,13 @@ export default function TimelineItem({ data, align = "left", isLast = false, isE
                       ))}
                     </ul>
                   </div>
+                </div>
+              )}
+
+              {/* Interaction Label */}
+              {!isEducation && (
+                <div className="absolute bottom-4 right-6 opacity-60 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+                  <span className="text-[10px] text-zinc-500 italic font-medium tracking-wider uppercase">Hover for more details</span>
                 </div>
               )}
             </div>
@@ -93,8 +123,16 @@ export default function TimelineItem({ data, align = "left", isLast = false, isE
           ) : <span className="text-zinc-300 font-medium">{data.dates}</span>}
         </span>
         <TiltWidget>
-          <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 p-6 rounded-xl hover:border-[#ff2a2a]/50 hover:bg-[#ff2a2a]/[0.02] transition-all shadow-[0_0_20px_rgba(255,42,42,0.05)] hover:shadow-[0_0_30px_rgba(255,42,42,0.2)] group hover:scale-[1.02] duration-300">
-            <h4 className="text-lg font-bold text-white mb-1.5 group-hover:text-[#ff2a2a] transition-colors">{data.title}</h4>
+          <div className={`bg-white/[0.02] backdrop-blur-xl border border-white/10 p-6 rounded-xl hover:border-[#ff2a2a]/50 hover:bg-[#ff2a2a]/[0.02] transition-all shadow-[0_0_20px_rgba(255,42,42,0.05)] hover:shadow-[0_0_30px_rgba(255,42,42,0.2)] group hover:scale-[1.02] duration-300 relative overflow-hidden ${isEducation ? 'border-b-4 border-b-[#ff2a2a] shadow-[0_8px_15px_-8px_rgba(255,42,42,0.5)]' : ''}`}>
+            <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 group-hover:text-[#ff2a2a] transition-all duration-500">
+               {isEducation ? (
+                 <span className="text-3xl font-black">{eduNumber}</span>
+               ) : (
+                 <Icon className="w-6 h-6" />
+               )}
+            </div>
+            
+            <h4 className="text-lg font-bold text-white mb-1.5 group-hover:text-[#ff2a2a] transition-colors pr-10">{data.title}</h4>
             <p className="text-sm text-zinc-400">{data.company || data.institution}</p>
             
             {data.details && (
@@ -121,6 +159,13 @@ export default function TimelineItem({ data, align = "left", isLast = false, isE
                   </div>
                 </div>
               )}
+
+            {/* Interaction Label - Mobile */}
+            {!isEducation && (
+              <div className="absolute bottom-3 right-5 opacity-40 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+                <span className="text-[9px] text-zinc-500 italic font-medium tracking-wider uppercase">Hover for more details</span>
+              </div>
+            )}
           </div>
         </TiltWidget>
       </div>

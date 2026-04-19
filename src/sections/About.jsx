@@ -29,7 +29,7 @@ export default function About() {
 
           <div className="md:col-span-7 space-y-6 text-zinc-400 text-[15px] leading-relaxed">
             {about.description.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
+              <p key={idx} className="drop-cap">{paragraph}</p>
             ))}
           </div>
 

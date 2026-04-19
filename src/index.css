@@ -37,3 +37,45 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #e50914;
 }
+
+/* Professional Mastery Marquee */
+@keyframes marquee-l-to-r {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-l-to-r {
+  display: flex;
+  width: max-content;
+  animation: marquee-l-to-r 30s linear infinite;
+}
+
+.animate-marquee-l-to-r:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-r-to-l {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-r-to-l {
+  display: flex;
+  width: max-content;
+  animation: marquee-r-to-l 40s linear infinite;
+}
+
+.animate-marquee-r-to-l:hover {
+  animation-play-state: paused;
+}
+
+.drop-cap::first-letter {
+  color: #ff2a2a;
+  font-size: 2.25rem;
+  font-weight: 900;
+  float: left;
+  line-height: 1;
+  margin-right: 0.35rem;
+  margin-top: 0.2rem;
+  text-shadow: 0 0 10px rgba(255, 42, 42, 0.4);
+}

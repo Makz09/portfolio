@@ -40,6 +40,7 @@ export default function Trajectory() {
               align="left" 
               isLast={idx === education.length - 1} 
               isEducation={true}
+              eduNumber={education.length - idx}
             />
           ))}
         </div>

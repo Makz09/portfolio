@@ -97,8 +97,8 @@ export const portfolioData = {
   ],
   education: [
     { 
-      dates: "Batch A.Y. 2025 - On-going", 
-      title: "Master’s Degree", 
+      dates: "School Year 2025 - On-going", 
+      title: "Post-Graduate Education", 
       institution: "", 
       details: [
         { type: "bullet", text: "Master of Information Technology" },
@@ -107,18 +107,19 @@ export const portfolioData = {
       ]
     },
     { 
-      dates: "Batch A.Y. 2022 - 2023", 
-      title: "Bachelor’s Degree", 
+      dates: "School Year 2019 - 2023", 
+      title: "Tertiary Education", 
       institution: "", 
       details: [
-        { type: "bullet", text: "Bachelor of Science in Information Technology Specialized in Mobile Application Development" },
+        { type: "bullet", text: "Bachelor of Science in Information Technology" },
+        { type: "bullet", text: "Specialized in Mobile Application Development" },
         { type: "bullet", text: "Southville International School and Colleges" },
         { type: "bullet", text: "@BF Homes, Las Piñas City" }
       ]
     },
     { 
-      dates: "Batch A.Y. 2018 - 2019", 
-      title: "Senior Highschool", 
+      dates: "School Year 2013 - 2018", 
+      title: "Secondary Education", 
       institution: "", 
       details: [
         { type: "bullet", text: "Technical Vocational Education Training" },
@@ -127,8 +128,8 @@ export const portfolioData = {
       ]
     },
     { 
-      dates: "Batch A.Y. 2012 - 2013", 
-      title: "Elementary Level", 
+      dates: "School Year 2008 - 2013", 
+      title: "Primary Education", 
       institution: "", 
       details: [
         { type: "bullet", text: "Genablan Oriental Elementary School" },
@@ -186,6 +187,29 @@ export const portfolioData = {
       title: "Student Management System Application",
       description: "A application system used by teachers to monitor students grades and attendance.",
       tags: ["C#", "MySQL", "Windows Forms"],
+    }
+  ],
+  certifications: [
+    "Technical Drafting NCII",
+    "Computer System Servicing NCII",
+    "Mechatronics Servicing NCII"
+  ],
+  vocationalExpertise: [
+    {
+      category: "Industrial & Engineering",
+      skills: ["Machining NCI / II", "CNC Machine / Wire-Cut NCII / III", "SMAW NCII / III", "BIT Metal Works", "Electrical Installation NCI / II / III"]
+    },
+    {
+      category: "Technical & Automotive",
+      skills: ["Automotive Servicing NCI / II / III", "Driving NCII"]
+    },
+    {
+      category: "Creative & Drafting",
+      skills: ["AutoCAD 2D / 3D", "Technical Drafting NCII", "Computer System Servicing NCII", "Mechatronics Servicing NCII", "Mechanical Drafting NCII", "Adobe Photoshop", "Adobe Illustrator"]
+    },
+    {
+      category: "Service & Hospitality",
+      skills: ["Bread and Pastry Production NCII", "Tailoring NCII"]
     }
   ]
 };

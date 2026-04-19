@@ -9,6 +9,7 @@ import { Link as ScrollLink } from 'react-scroll';
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle, sending, success, error
+  const [hoveredHobby, setHoveredHobby] = useState('');
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -17,21 +18,25 @@ export default function Contact() {
     setStatus('sending');
     
     // Real EmailJS Integration
-    // Replace with your true keys from dashboard: https://dashboard.emailjs.com/
     emailjs.send(
       'service_i3lnz0n', 
       'template_apiv9sf', 
       formData, 
       'EaJ86lv_ewK4maeC4'
-    ).then(() => setStatus('success')).catch(() => setStatus('error'));
-    
-    // Mock for now until user configures EmailJS keys
-    // setTimeout(() => {
-    //   setStatus('success');
-    //   setFormData({ name: '', email: '', subject: '', message: '' });
-    //   setTimeout(() => setStatus('idle'), 3000);
-    // }, 1500);
+    ).then(() => {
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setStatus('idle'), 3000);
+    }).catch(() => setStatus('error'));
   };
+
+  const hobbies = [
+    { icon: FaRunning, label: 'Runner / Marathon' },
+    { icon: FaFutbol, label: 'Football Player' },
+    { icon: FaPalette, label: 'Artist / Graffiti' },
+    { icon: FaMicrophone, label: 'Singer / Choir / Rapper' },
+    { icon: MdEmojiPeople, label: 'Dancer / HipHop' },
+  ];
 
   return (
     <SectionWrapper id="contact" className="!pb-0">
@@ -57,14 +62,32 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 flex items-center flex-wrap gap-4 text-zinc-500 text-sm font-bold tracking-widest">
-            <span className="text-white mr-2">OFF-SCREEN:</span>
-            <FaRunning className="w-5 h-5 hover:text-[#ff2a2a] hover:drop-shadow-[0_0_12px_rgba(255,42,42,0.8)] hover:animate-vibrate cursor-pointer transition-all duration-300" />
-            <FaFutbol className="w-5 h-5 hover:text-[#ff2a2a] hover:drop-shadow-[0_0_12px_rgba(255,42,42,0.8)] hover:animate-vibrate cursor-pointer transition-all duration-300" />
-            <FaPalette className="w-5 h-5 hover:text-[#ff2a2a] hover:drop-shadow-[0_0_12px_rgba(255,42,42,0.8)] hover:animate-vibrate cursor-pointer transition-all duration-300" />
-            <FaMicrophone className="w-5 h-5 hover:text-[#ff2a2a] hover:drop-shadow-[0_0_12px_rgba(255,42,42,0.8)] hover:animate-vibrate cursor-pointer transition-all duration-300" />
-            <MdEmojiPeople className="w-6 h-6 hover:text-[#ff2a2a] hover:drop-shadow-[0_0_12px_rgba(255,42,42,0.8)] hover:animate-vibrate cursor-pointer transition-all duration-300 -ml-1" />
-            <span className="text-zinc-400 text-lg font-serif italic ml-1"></span>
+          <div className="border-t border-zinc-800 pt-8 flex flex-col gap-5">
+            <div className="flex items-center flex-wrap gap-4 text-zinc-500 text-xs font-black tracking-[0.2em] uppercase">
+              <span className="text-white">OFF-SCREEN:</span>
+              <div className="flex items-center gap-5 ml-2">
+                {hobbies.map((hobby, i) => (
+                  <hobby.icon 
+                    key={i}
+                    onMouseEnter={() => setHoveredHobby(hobby.label)}
+                    onMouseLeave={() => setHoveredHobby('')}
+                    className="w-5 h-5 hover:text-[#ff2a2a] hover:drop-shadow-[0_0_12px_rgba(255,42,42,0.8)] hover:animate-vibrate cursor-pointer transition-all duration-300"
+                  />
+                ))}
+              </div>
+            </div>
+            
+            {/* Hobby Meaning Label - Now Below */}
+            <div className="min-h-[2rem] flex items-center">
+              <span className={`text-[#ff2a2a] text-2xl font-serif italic transition-all duration-700 ${hoveredHobby ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} drop-shadow-[0_0_10px_rgba(255,42,42,0.5)]`}>
+                {hoveredHobby}
+              </span>
+              {!hoveredHobby && (
+                <span className="text-zinc-600 text-sm font-medium italic opacity-60 flex items-center gap-2 animate-pulse">
+                  ( Hover over icons to reveal hobbies )
+                </span>
+              )}
+            </div>
           </div>
         </div>
 
@@ -147,8 +170,11 @@ export default function Contact() {
             <div className="flex flex-col gap-4">
               <ScrollLink to="about" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">About</ScrollLink>
               <ScrollLink to="expertise" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Expertise</ScrollLink>
-              <ScrollLink to="experience" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Experience</ScrollLink>
+              <ScrollLink to="mastery" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Mastery</ScrollLink>
+              <ScrollLink to="experience" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Jobs</ScrollLink>
+              <ScrollLink to="academic" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Academics</ScrollLink>
               <ScrollLink to="skills" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Skills</ScrollLink>
+              <ScrollLink to="approach" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Approach</ScrollLink>
               <ScrollLink to="projects" smooth className="cursor-pointer text-zinc-400 hover:text-primary transition-colors text-[13px] font-bold tracking-wide w-fit uppercase">Projects</ScrollLink>
             </div>
           </div>
