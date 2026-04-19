@@ -44,17 +44,17 @@ export default function Hero() {
   const words = ['Charles', 'Lebeco', 'Donor'];
 
   return (
-    <SectionWrapper id="home" className="!pt-40">
+    <SectionWrapper id="home" className="!pt-32 md:!pt-40">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8 relative z-10 w-full">
         {/* Left Side: Introduction */}
-        <div className="flex-1 w-full lg:max-w-[50%] relative z-10">
+        <div className="flex-1 w-full lg:max-w-[50%] relative z-10 text-center lg:text-left">
           <div className="inline-flex items-center justify-center px-6 py-2 rounded-full border border-red-900/80 bg-red-950/20 mb-8 backdrop-blur-md">
             <span className="text-xs font-bold tracking-[0.2em] text-red-500 drop-shadow-[0_0_8px_rgba(229,9,20,0.5)] uppercase ml-1">
               WELCOME TO MY WORLD!
             </span>
           </div>
           
-          <div className="mb-8" style={{ perspective: '1000px' }}>
+          <div className="mb-8 flex justify-center lg:justify-start" style={{ perspective: '1000px' }}>
             <img 
               src={profilePic} 
               alt="Charles Lebeco Donor" 
@@ -65,11 +65,13 @@ export default function Hero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tighter leading-tight mb-8">
             Hi! My Name Is<br />
             <span className="text-[#ff2a2a] block mt-1 relative h-[1.2em] w-full overflow-hidden">
-              <WordSlider words={words} />
+              <span className="flex justify-center lg:justify-start">
+                <WordSlider words={words} />
+              </span>
             </span>
           </h1>
 
-          <div className="flex gap-4 mb-12">
+          <div className="flex justify-center lg:justify-start gap-4 mb-12">
             <a href="https://www.linkedin.com/in/charleslebecodonor/" className="p-3 rounded-full bg-surface border border-border hover:border-[#ff2a2a] hover:bg-[#ff2a2a]/10 hover:text-[#ff2a2a] hover:shadow-[0_0_15px_rgba(255,42,42,0.8)] hover:animate-vibrate transition-all duration-300 text-zinc-400">
               <FaLinkedin className="w-5 h-5" />
             </a>
@@ -84,7 +86,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-4 mt-4">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
             <Link to="projects" smooth className="group bg-[#ff2a2a] hover:bg-[#ff1a1a] text-white px-8 py-3.5 rounded-full font-bold cursor-pointer transition-all duration-300 flex items-center gap-2 shadow-[0_0_15px_rgba(255,42,42,0.3)] hover:shadow-[0_0_35px_rgba(255,42,42,0.6)] hover:-translate-y-1">
               VIEW PROJECTS <span aria-hidden="true" className="rotate-[-45deg] inline-block group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform duration-300">&rarr;</span>
             </Link>
@@ -96,7 +98,7 @@ export default function Hero() {
         </div>
 
         {/* Right Side: Code Snippet Widget */}
-        <div className="flex-1 w-full max-w-[500px] lg:max-w-none ml-auto">
+        <div className="flex-1 w-full max-w-[500px] lg:max-w-none mx-auto lg:ml-auto">
           <TiltWidget>
             <div className="w-full bg-[#0d0d0d] rounded-xl border border-zinc-800 shadow-[0_0_50px_rgba(229,9,20,0.1)] overflow-hidden backdrop-blur-md transition-shadow duration-500 hover:shadow-[0_0_80px_rgba(229,9,20,0.3)]">
             {/* Window Header */}

@@ -28,7 +28,7 @@ export default function Archive({ onBack }) {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-tight"
+            className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tight"
           >
             Project <span className="text-[#ff2a2a]">Archive</span>
           </motion.h2>
