@@ -41,20 +41,16 @@ export default function ProfessionalMastery() {
           <div className="flex gap-4 w-fit animate-marquee-l-to-r">
             {/* Duplicate the array 4 times to ensure it covers the screen width even for 3 items */}
             {[...certifications, ...certifications, ...certifications, ...certifications].map((cert, i) => (
-              <TiltWidget 
-                key={i} 
-                className="flex-shrink-0 w-[280px] sm:w-[350px] md:w-[400px]"
+              <div
+                key={i}
+                className="flex-shrink-0 w-[280px] sm:w-[350px] md:w-[400px] bg-white/[0.03] border border-white/10 p-6 rounded-2xl group/card hover:border-[#ff2a2a]/50 hover:bg-white/[0.05] border-b-4 border-b-[#ff2a2a] shadow-[0_8px_20px_-10px_rgba(255,42,42,0.6)] transition-all duration-300 relative overflow-hidden"
               >
-                <div
-                  className="bg-white/[0.03] border border-white/10 p-6 rounded-2xl group/card hover:border-[#ff2a2a]/50 hover:bg-white/[0.05] hover:shadow-[15px_15px_40px_-10px_rgba(255,42,42,0.4)] transition-all duration-300 relative overflow-hidden h-full"
-                >
-                  <div className="absolute top-0 right-0 p-4 opacity-10 group-hover/card:opacity-100 group-hover/card:text-[#ff2a2a] transition-all duration-500">
-                    <CheckCircle2 className="w-5 h-5" />
-                  </div>
-                  <p className="text-white font-bold text-lg mb-1">{cert}</p>
-                  <span className="text-xs font-black text-[#ff2a2a] uppercase tracking-widest bg-[#ff2a2a]/10 px-2 py-0.5 rounded">NCII Certified</span>
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover/card:opacity-100 group-hover/card:text-[#ff2a2a] transition-all duration-500">
+                  <CheckCircle2 className="w-7 h-7" />
                 </div>
-              </TiltWidget>
+                <p className="text-white font-bold text-lg mb-1">{cert}</p>
+                <span className="text-xs font-black text-[#ff2a2a] uppercase tracking-widest bg-[#ff2a2a]/10 px-2 py-0.5 rounded">NCII Certified</span>
+              </div>
             ))}
           </div>
         </div>
