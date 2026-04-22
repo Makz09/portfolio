@@ -160,7 +160,7 @@ export const portfolioData = {
       tags: ["Laravel", "PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite", "React JS"],
       repoUrl: "https://github.com/Makz09/grade-viewing-system",
       liveUrl: "#",
-      images: ["/src/assets/gradeviewer.png"]
+      images: ["/src/assets/grade_viewer_system/grade_viewer_system_01.png", "/src/assets/grade_viewer_system/grade_viewer_system_02.png", "/src/assets/grade_viewer_system/grade_viewer_system_03.png", "/src/assets/grade_viewer_system/grade_viewer_system_04.png"]
     },
     {
       title: "Document Management System Web and Mobile Application",
