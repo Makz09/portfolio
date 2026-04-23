@@ -1,5 +1,3 @@
-const asset = (path) => new URL(path, import.meta.url).href;
-
 export const portfolioData = {
   about: {
     title: "About Me",
@@ -146,7 +144,7 @@ export const portfolioData = {
       tags: ["React", "Node.js", "MySQL", "Laravel", "PHP", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite"],
       repoUrl: "https://github.com/Makz09/MRMS",
       liveUrl: "#",
-      images: [asset("../assets/MRMS/mrms_01.png"), asset("../assets/MRMS/mrms_02.png"), asset("../assets/MRMS/mrms_03.png")]
+      images: [new URL("../assets/mrms/mrms_01.png", import.meta.url).href, new URL("../assets/mrms/mrms_02.png", import.meta.url).href, new URL("../assets/mrms/mrms_03.png", import.meta.url).href]
     },
     {
       title: "Alumni Tracking System Web and Mobile Application",
@@ -154,7 +152,7 @@ export const portfolioData = {
       tags: ["Laravel", "PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/arma/arma_01.png"), asset("../assets/arma/arma_02.png"), asset("../assets/arma/arma_03.png"), asset("../assets/arma/arma_04.png"), asset("../assets/arma/arma_05.png")]
+      images: [new URL("../assets/arma/arma_01.png", import.meta.url).href, new URL("../assets/arma/arma_02.png", import.meta.url).href, new URL("../assets/arma/arma_03.png", import.meta.url).href, new URL("../assets/arma/arma_04.png", import.meta.url).href, new URL("../assets/arma/arma_05.png", import.meta.url).href]
     },
     {
       title: "Grade Viewing System",
@@ -162,7 +160,7 @@ export const portfolioData = {
       tags: ["Laravel", "PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite", "React JS"],
       repoUrl: "https://github.com/Makz09/grade-viewing-system",
       liveUrl: "#",
-      images: [asset("../assets/grade_viewer_system/grade_viewer_system_01.png"), asset("../assets/grade_viewer_system/grade_viewer_system_02.png"), asset("../assets/grade_viewer_system/grade_viewer_system_03.png"), asset("../assets/grade_viewer_system/grade_viewer_system_04.png")]
+      images: [new URL("../assets/grade_viewer_system/grade_viewer_system_01.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_02.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_03.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_04.png", import.meta.url).href]
     },
     {
       title: "Document Management System Web and Mobile Application",
@@ -170,7 +168,7 @@ export const portfolioData = {
       tags: ["MySQL", "HTML5", "CSS3", "JavaScript"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/dms.png")]
+      images: [],
     },
     {
       title: "Lost and Found System Web and Mobile Application",
@@ -178,7 +176,7 @@ export const portfolioData = {
       tags: ["React Native", "MySQL", "HTML5", "CSS3", "JavaScript"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/lostfound.png")]
+      images: [],
     },
     {
       title: "Robinson Commercial Services System Web Application",
@@ -186,7 +184,7 @@ export const portfolioData = {
       tags: ["React Native", "Firebase"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/robinson.png")]
+      images: [],
     },
     {
       title: "PC Parts Picker Web Application",
@@ -194,7 +192,7 @@ export const portfolioData = {
       tags: ["HTML5", "CSS3", "JavaScript"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/pcparts.png")]
+      images: [],
     },
     {
       title: "Quiz Maker Application",
@@ -202,7 +200,7 @@ export const portfolioData = {
       tags: ["C#", "Windows Forms"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/quiz_maker/quiz_maker_01.png"), asset("../assets/quiz_maker/quiz_maker_02.png"), asset("../assets/quiz_maker/quiz_maker_03.png"), asset("../assets/quiz_maker/quiz_maker_04.png")]
+      images: [new URL("../assets/quiz_maker/quiz_maker_01.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_02.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_03.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_04.png", import.meta.url).href]
     },
     {
       title: "Enigma Machine Application",
@@ -210,7 +208,7 @@ export const portfolioData = {
       tags: ["C#", "Windows Forms"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/enigma_machine/enigma_machine_01.png"), asset("../assets/enigma_machine/enigma_machine_02.png"), asset("../assets/enigma_machine/enigma_machine_03.png")]
+      images: [new URL("../assets/enigma_machine/enigma_machine_01.png", import.meta.url).href, new URL("../assets/enigma_machine/enigma_machine_02.png", import.meta.url).href, new URL("../assets/enigma_machine/enigma_machine_03.png", import.meta.url).href]
     },
     {
       title: "Biodata Maker Web Application",
@@ -218,7 +216,7 @@ export const portfolioData = {
       tags: ["PHP", "MySQL", "HTML5", "CSS3"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/biodata.png")]
+      images: [],
     },
     {
       title: "Student Management System Application",
@@ -226,7 +224,7 @@ export const portfolioData = {
       tags: ["C#", "MySQL", "Windows Forms"],
       repoUrl: "#",
       liveUrl: "#",
-      images: [asset("../assets/studentmgmt.png")]
+      images: [],
     }
   ],
   certifications: [
