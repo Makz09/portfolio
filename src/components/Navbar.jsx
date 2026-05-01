@@ -6,6 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Navbar({ onHomeClick }) {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const logoSrc = `${import.meta.env.BASE_URL}cld_logo.png`;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -34,7 +35,7 @@ export default function Navbar({ onHomeClick }) {
       <nav className={`fixed top-0 w-full z-[80] transition-all duration-300 px-6 md:px-8 py-4 md:py-5 flex items-center ${scrolled || isMenuOpen ? 'bg-background/95 backdrop-blur-md border-b border-white/5 shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
           <Link to="home" smooth spy onClick={handleLinkClick} className="cursor-pointer z-[90]">
-            <img src="/cld_logo.png" alt="My Logo" className="h-7 md:h-10 object-contain hover:scale-105 transition-transform" />
+            <img src={logoSrc} alt="My Logo" className="h-7 md:h-10 object-contain hover:scale-105 transition-transform" />
           </Link>
 
           {/* Desktop Nav */}

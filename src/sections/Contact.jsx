@@ -158,7 +158,7 @@ export default function Contact() {
           
           {/* Logo & Description */}
           <div className="flex flex-col gap-4">
-            <img src="/cld_logo.png" alt="Charles Donor Logo" className="h-12 md:h-14 w-auto object-contain mb-2 justify-self-start self-start" />
+            <img src={`${import.meta.env.BASE_URL}cld_logo.png`} alt="Charles Donor Logo" className="h-12 md:h-14 w-auto object-contain mb-2 justify-self-start self-start" />
             <p className="text-sm text-zinc-400 leading-relaxed max-w-[280px]">
               Professional Full Stack Developer dedicated to crafting immersive, high-performance digital experiences with cutting-edge technology.
             </p>

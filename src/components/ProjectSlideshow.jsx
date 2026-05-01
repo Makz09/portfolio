@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ProjectSlideshow = ({ images, opacity = 0.4 }) => {
+const ProjectSlideshow = ({ images = [], opacity = 0.4 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -14,6 +14,8 @@ const ProjectSlideshow = ({ images, opacity = 0.4 }) => {
 
     return () => clearInterval(timer);
   }, [images]);
+
+  if (!images.length) return null;
 
   return (
     <div 

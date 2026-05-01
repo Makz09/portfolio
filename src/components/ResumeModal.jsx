@@ -40,7 +40,7 @@ export default function ResumeModal({ isOpen, onClose }) {
               
               <div className="flex items-center gap-2">
                 <a 
-                  href="/Resume_Charles_Lebeco_Donor.pdf" 
+                  href={`${import.meta.env.BASE_URL}Resume_Charles_Lebeco_Donor.pdf`} 
                   download 
                   className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-lg transition-all flex items-center gap-2 text-xs font-bold tracking-wider"
                   title="Download PDF"
@@ -62,7 +62,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             <div className="flex-1 overflow-y-auto p-4 md:p-8 bg-[#0a0a0a] custom-scrollbar">
               <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl border border-white/5">
                 <img 
-                  src="/Resume_Charles_Lebeco_Donor.jpg" 
+                  src={`${import.meta.env.BASE_URL}Resume_Charles_Lebeco_Donor.jpg`} 
                   alt="Charles Lebeco Donor Resume" 
                   className="w-full h-auto object-contain block"
                 />
