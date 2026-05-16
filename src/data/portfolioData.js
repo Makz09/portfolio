@@ -159,7 +159,7 @@ export const portfolioData = {
       description: "A secure and efficient web-based platform designed for educational institutions to manage student records and provide students with instant, secure access to their academic grades.",
       tags: ["Laravel", "PHP", "SweetAlert2", "Lucid React.", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite"],
       repoUrl: "https://github.com/Makz09/grade-viewing-system",
-      liveUrl: "#",
+      liveUrl: "",
       images: [new URL("../assets/grade_viewer_system/grade_viewer_system_01.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_02.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_03.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_04.png", import.meta.url).href]
     },
     {
@@ -167,8 +167,8 @@ export const portfolioData = {
       description: "A premium, high-fidelity habit tracking mobile application built with React Native and Expo. This app features a modern design system, real-time statistics, and robust data management, designed to help users build and maintain life-changing habits.",
       tags: ["Expo", "React Native", "HTML5", "CSS3", "JavaScript", "TypeScript", "Firebase", "Expo CLI", "Expo Config Plugins"],
       repoUrl: "https://github.com/Makz09/habit-tracker-app",
-      liveUrl: "#",
-      images: [new URL("../assets/habit_tracker_app/habit_tracker_00.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_01.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_02.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_03.png", import.meta.url).href]
+      liveUrl: "https://qrco.de/bgoNTY",
+      images: [new URL("../assets/habit_tracker_app/habit_tracker_00.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_01.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_02.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_03.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_04.png", import.meta.url).href]
     },
     {
       title: "Mass Mailer: Clinic Management & Campaign Launchpad",
