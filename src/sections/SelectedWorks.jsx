@@ -63,10 +63,11 @@ export default function SelectedWorks({ onViewArchive }) {
                 <p className="text-zinc-400 text-[15px] leading-relaxed max-w-md">{project.description}</p>
               </div>
               <a 
-                href={project.repoUrl} 
+                href={project.liveUrl && project.liveUrl !== '#' ? project.liveUrl : project.repoUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="mt-2 text-zinc-500 hover:text-white transition-colors"
+                title={project.liveUrl && project.liveUrl !== '#' ? "View Live" : "View Repository"}
               >
                 <FaExternalLinkAlt className="w-5 h-5" />
               </a>

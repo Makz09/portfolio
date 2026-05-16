@@ -88,16 +88,27 @@ export default function Archive({ onBack }) {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="mt-auto flex">
+                  <div className="mt-auto flex gap-3">
                     <a 
                       href={project.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 px-4 flex items-center justify-center gap-2 text-sm font-bold text-white transition-all active:scale-95"
+                      className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 px-2 flex items-center justify-center gap-2 text-[10px] font-black text-white transition-all active:scale-95"
                     >
-                      <FaCode className="w-4 h-4" />
-                      VIEW SOURCE CODE
+                      <FaCode className="w-3.5 h-3.5" />
+                      SOURCE CODE
                     </a>
+                    {project.liveUrl && project.liveUrl !== '#' && (
+                      <a 
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-[#ff2a2a]/10 hover:bg-[#ff2a2a]/20 border border-[#ff2a2a]/20 rounded-xl py-3 px-2 flex items-center justify-center gap-2 text-[10px] font-black text-[#ff2a2a] transition-all active:scale-95"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        VIEW LIVE
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

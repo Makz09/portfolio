@@ -143,7 +143,7 @@ export const portfolioData = {
       description: "A system for managing materials requisition and tracking and monitoring of budgets, used by Southville International School and Colleges.",
       tags: ["React", "Node.js", "MySQL", "Laravel", "PHP", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite"],
       repoUrl: "https://github.com/Makz09/MRMS",
-      liveUrl: "#",
+      liveUrl: "http://mrms.southville.edu.ph/",
       images: [new URL("../assets/mrms/mrms_01.png", import.meta.url).href, new URL("../assets/mrms/mrms_02.png", import.meta.url).href, new URL("../assets/mrms/mrms_03.png", import.meta.url).href]
     },
     {
@@ -155,12 +155,44 @@ export const portfolioData = {
       images: [new URL("../assets/arma/arma_01.png", import.meta.url).href, new URL("../assets/arma/arma_02.png", import.meta.url).href, new URL("../assets/arma/arma_03.png", import.meta.url).href, new URL("../assets/arma/arma_04.png", import.meta.url).href, new URL("../assets/arma/arma_05.png", import.meta.url).href]
     },
     {
-      title: "Grade Viewing System",
-      description: "A streamlined system for viewing grades of students, used by the faculty of Asian SEED Academy of Technology School.",
-      tags: ["Laravel", "PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite", "React JS"],
+      title: "Student Grade Viewing System",
+      description: "A secure and efficient web-based platform designed for educational institutions to manage student records and provide students with instant, secure access to their academic grades.",
+      tags: ["Laravel", "PHP", "SweetAlert2", "Lucid React.", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite"],
       repoUrl: "https://github.com/Makz09/grade-viewing-system",
       liveUrl: "#",
       images: [new URL("../assets/grade_viewer_system/grade_viewer_system_01.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_02.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_03.png", import.meta.url).href, new URL("../assets/grade_viewer_system/grade_viewer_system_04.png", import.meta.url).href]
+    },
+    {
+      title: "Habit Tracker Pro",
+      description: "A premium, high-fidelity habit tracking mobile application built with React Native and Expo. This app features a modern design system, real-time statistics, and robust data management, designed to help users build and maintain life-changing habits.",
+      tags: ["Expo", "React Native", "HTML5", "CSS3", "JavaScript", "TypeScript", "Firebase", "Expo CLI", "Expo Config Plugins"],
+      repoUrl: "https://github.com/Makz09/habit-tracker-app",
+      liveUrl: "#",
+      images: [new URL("../assets/habit_tracker_app/habit_tracker_00.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_01.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_02.png", import.meta.url).href, new URL("../assets/habit_tracker_app/habit_tracker_03.png", import.meta.url).href]
+    },
+    {
+      title: "Mass Mailer: Clinic Management & Campaign Launchpad",
+      description: "MassMailer is a high-performance, all-in-one administrative suite designed specifically for veterinary clinics and healthcare providers. It merges robust patient record management with a powerful marketing launchpad, allowing clinics to automate engagement, track growth analytics, and manage multi-branch logistics from a single, premium dashboard.",
+      tags: ["Laravel", "PHP", "ReactJS", "NodeJS", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Vite"],
+      repoUrl: "https://github.com/Makz09/MassMailer",
+      liveUrl: "#",
+      images: [new URL("../assets/mass_mailer/mass_mailer_01.png", import.meta.url).href, new URL("../assets/mass_mailer/mass_mailer_02.png", import.meta.url).href, new URL("../assets/mass_mailer/mass_mailer_03.png", import.meta.url).href, new URL("../assets/mass_mailer/mass_mailer_04.png", import.meta.url).href, new URL("../assets/mass_mailer/mass_mailer_05.png", import.meta.url).href],
+    },
+    {
+      title: "Quiz Maker Application",
+      description: "An application system for making quizzes that has a feature of auto-grading and generating multiple quiz reports.",
+      tags: ["C#", "Windows Forms"],
+      repoUrl: "#",
+      liveUrl: "#",
+      images: [new URL("../assets/quiz_maker/quiz_maker_01.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_02.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_03.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_04.png", import.meta.url).href]
+    },
+    {
+      title: "Enigma Machine Application",
+      description: "A system application design to encrypt and decrypt messages using the Enigma machine algorithm.",
+      tags: ["C#", "Windows Forms"],
+      repoUrl: "#",
+      liveUrl: "#",
+      images: [new URL("../assets/enigma_machine/enigma_machine_01.png", import.meta.url).href, new URL("../assets/enigma_machine/enigma_machine_02.png", import.meta.url).href, new URL("../assets/enigma_machine/enigma_machine_03.png", import.meta.url).href]
     },
     {
       title: "Document Management System Web and Mobile Application",
@@ -193,22 +225,6 @@ export const portfolioData = {
       repoUrl: "#",
       liveUrl: "#",
       images: [],
-    },
-    {
-      title: "Quiz Maker Application",
-      description: "An application system for making quizzes that has a feature of auto-grading and generating multiple quiz reports.",
-      tags: ["C#", "Windows Forms"],
-      repoUrl: "#",
-      liveUrl: "#",
-      images: [new URL("../assets/quiz_maker/quiz_maker_01.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_02.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_03.png", import.meta.url).href, new URL("../assets/quiz_maker/quiz_maker_04.png", import.meta.url).href]
-    },
-    {
-      title: "Enigma Machine Application",
-      description: "A system application design to encrypt and decrypt messages using the Enigma machine algorithm.",
-      tags: ["C#", "Windows Forms"],
-      repoUrl: "#",
-      liveUrl: "#",
-      images: [new URL("../assets/enigma_machine/enigma_machine_01.png", import.meta.url).href, new URL("../assets/enigma_machine/enigma_machine_02.png", import.meta.url).href, new URL("../assets/enigma_machine/enigma_machine_03.png", import.meta.url).href]
     },
     {
       title: "Biodata Maker Web Application",
